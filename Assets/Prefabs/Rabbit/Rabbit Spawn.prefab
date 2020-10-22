@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7157960619623969489}
   - component: {fileID: 7157960619623969490}
   m_Layer: 0
-  m_Name: RabbitSpawn I
+  m_Name: Rabbit Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rabbitPrefab: {fileID: 8196050149929189865, guid: 9d113aa1d92068140b5d017e174662a8,
     type: 3}
-  nbRabbit: 100
+  nbRabbit: 30
   spawnCenter: {fileID: 7157960619623969489}
-  spawnRange: 3
+  spawnRange: 5

@@ -7,7 +7,6 @@ namespace Radio
     [RequireComponent(typeof(TextMeshPro))]
     public class ClipNameToText : MonoBehaviour
     {
-
         [SerializeField] private AudioSource source;
         private TextMeshPro _textMesh;
 

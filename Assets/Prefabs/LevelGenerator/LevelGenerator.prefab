@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1129061567446791965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129061567446791967}
+  - component: {fileID: 1129061567446791964}
+  m_Layer: 0
+  m_Name: LevelGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1129061567446791967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129061567446791965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1129061567446791964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129061567446791965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7269db9ef6cc47168a035ad11e2ca16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blocks:
+  - {fileID: 11400000, guid: cee5b59d9bf3bde4099029738b6a29fe, type: 2}
+  - {fileID: 11400000, guid: 72469b9f089ae624393531d11c8fd1bb, type: 2}
+  - {fileID: 11400000, guid: ac5d5ab7be9b00943985bd9d4e550fef, type: 2}
+  - {fileID: 11400000, guid: bab2de1f97733f34f98f0ee0e25dd176, type: 2}
+  - {fileID: 11400000, guid: 0f16a804272f90f4f92ac33d41180f78, type: 2}
+  - {fileID: 11400000, guid: 2846c3175fccfde4ba73735139390a2c, type: 2}
+  - {fileID: 11400000, guid: cf38346fcecda584b980abbfc9909cce, type: 2}
+  additionalAssets:
+  - prefab: {fileID: 1238857230835517039, guid: 695379af9969afd40b9705f86d30c505,
+      type: 3}
+    amount: 10
+  - prefab: {fileID: 7157960619623969491, guid: 28f6fb31480c8554cb0dc3558320f86b,
+      type: 3}
+    amount: 15
+  width: 20
+  lenght: 20
+  height: 2
