@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Utility
 {
+    [RequireComponent(typeof(Renderer))]
     public class ScaleWithSound : MonoBehaviour
     {
         [SerializeField] private AudioSource source;
@@ -12,6 +13,7 @@ namespace Utility
         [SerializeField] private float growFactor = 2f;
 
         private Transform _transform;
+        private Renderer _renderer;
 
         private float _updatePeriod;
         private float[] _clipSampleData;
@@ -19,6 +21,8 @@ namespace Utility
         private void Start()
         {
             _transform = GetComponent<Transform>();
+            _renderer = GetComponent<Renderer>();
+            
             _updatePeriod = 1 / updateFrequency;
             _clipSampleData = new float[1024];
 
@@ -29,9 +33,12 @@ namespace Utility
         {
             for (;;)
             {
-                source.clip.GetData(_clipSampleData, source.timeSamples);
-
-                _transform.localScale = Vector3.one * (minScale + _clipSampleData.Average() * growFactor);
+                // do not make theses calculation for nothing, averaging 1024 sample is kinda heavy
+                if (_renderer.isVisible)
+                {
+                    source.clip.GetData(_clipSampleData, source.timeSamples);
+                    _transform.localScale = Vector3.one * (minScale + _clipSampleData.Average() * growFactor);
+                }
             
                 yield return new WaitForSeconds(_updatePeriod);
             }

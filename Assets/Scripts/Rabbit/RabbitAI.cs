@@ -5,6 +5,9 @@ using Random = UnityEngine.Random;
 
 namespace Rabbit
 {
+    /*
+     * not really an AI, the rabbit just wanders around randomly
+     */
     public class RabbitAI : MonoBehaviour
     {
     
